@@ -18,14 +18,14 @@ export const App = () => {
   }, [dispatch]);
 
     return (
-      <Layout>
+    <Layout>
       <h1>Phonebook</h1>
         <ContactForm />
         {isLoading && !error ? <b>Request in progress...</b> : null}
       <h2>Contacts</h2>
         <Filter />
         <ContactList/>
-</Layout>
+    </Layout>
     );
 
 
