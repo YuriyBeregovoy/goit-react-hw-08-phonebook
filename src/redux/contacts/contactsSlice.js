@@ -1,6 +1,6 @@
 import { createSlice} from "@reduxjs/toolkit";
 import { fetchContacts, addContacts, deleteContacts } from "./operations";
-
+import { logOut } from 'redux/auth/authoperations';
 
 const contactsSlice = createSlice({
   name: "contacts",
@@ -52,7 +52,15 @@ const contactsSlice = createSlice({
       .addCase(deleteContacts.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      });
+      })
+     .addCase(logOut.fulfilled, (state) => {
+         state.items = [];
+      state.error = null;
+      state.isLoading = false;
+      }
+
+      )
+     
   },
   
 });
