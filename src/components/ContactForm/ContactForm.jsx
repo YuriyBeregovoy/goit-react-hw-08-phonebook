@@ -1,6 +1,6 @@
 import { FormButton, FormContacts, LabelContacts } from "./ContactForm.styled"
 import { useDispatch } from "react-redux";
-import { addContacts} from "redux/operations";
+import { addContacts} from "redux/contacts/operations";
 import { nanoid } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 
