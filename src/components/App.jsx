@@ -4,8 +4,8 @@ import { ContactList } from "./ContactList/ContactList";
 import { Filter } from "./Filter/Filter";
 import { Layout } from "./Layout";
 import {  useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { getIsLoading, getError } from "redux/contactsSlice";
+import { fetchContacts } from 'redux/contacts/operations';
+import { getIsLoading, getError } from "redux/contacts/contactsSlice";
 import { useDispatch } from 'react-redux';
 
 export const App = () => {
