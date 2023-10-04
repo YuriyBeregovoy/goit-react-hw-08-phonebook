@@ -8,7 +8,8 @@ import { useSelector } from "react-redux";
 export const ContactForm = () => {
 
   const dispatch = useDispatch();
-  const contacts = useSelector((state) =>  state.contacts.items) || [];
+  const contacts = useSelector((state) => state.contacts.items) || [];
+  
    const handleNameSet = e => {
     e.preventDefault();
       const { name,  phone} = e.currentTarget.elements;
