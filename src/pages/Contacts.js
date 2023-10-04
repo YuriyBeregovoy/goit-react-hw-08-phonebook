@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import { ContactForm } from "./ContactForm/ContactForm";
-import { ContactList } from "./ContactList/ContactList";
-import { Filter } from "./Filter/Filter";
-import { Layout } from "./Layout";
+import { ContactForm } from "../components/ContactForm/ContactForm";
+import { ContactList } from "../components/ContactList/ContactList";
+import { Filter } from "../components/Filter/Filter";
+import { Layout } from "../components/Layout";
 import {  useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { getIsLoading, getError } from "redux/contactsSlice";
+import { fetchContacts } from '../redux/contacts/operations';
+import { getIsLoading, getError } from "../redux/contacts/contactsSlice";
 import { useDispatch } from 'react-redux';
 
 export  default function Contacts () {
