@@ -12,10 +12,10 @@ export const ContactForm = () => {
   
    const handleNameSet = e => {
     e.preventDefault();
-      const { name,  phone} = e.currentTarget.elements;
-     const newContact = { name: name.value, phone: phone.value, };
+      const { name, number} = e.currentTarget.elements;
+     const newContact ={ name: name.value, number: number.value, };
      
-
+   console.log(newContact)
 
   const isExistingContact = contacts.find(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
@@ -30,7 +30,7 @@ export const ContactForm = () => {
   
 
   return  <FormContacts onSubmit={handleNameSet}>
-      <LabelContacts htmlFor={nanoid()}>
+      <LabelContacts htmlFor={contacts.id}>
           <span>Name</span>
           <input
         id = {nanoid()} 
@@ -42,7 +42,7 @@ export const ContactForm = () => {
           <span>Number</span>
           <input
         type="tel"
-        name="phone"
+        name="number"
                 />
         </LabelContacts>
        <FormButton type="submit">Add contact</FormButton>
