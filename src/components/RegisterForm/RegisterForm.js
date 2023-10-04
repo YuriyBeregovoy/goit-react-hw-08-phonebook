@@ -29,7 +29,7 @@ export const RegisterForm = () => {
       </label>
       <label >
         Password
-        <input type="password" name="password" />
+        <input type="password" name="password"  />
       </label>
       <button type="submit">Register</button>
     </form>
