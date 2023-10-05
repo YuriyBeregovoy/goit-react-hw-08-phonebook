@@ -19,10 +19,10 @@ export  default function Contacts () {
 
     return (
     <Container>
-      <h1>Phonebook</h1>
+      <h1>Contacts</h1>
         <ContactForm />
         {isLoading && !error ? <b>Request in progress...</b> : null}
-      <h2>Contacts</h2>
+      <h2>Contacts list</h2>
         <Filter />
         <ContactList/>
     </Container>
