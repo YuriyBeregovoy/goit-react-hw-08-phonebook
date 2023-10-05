@@ -1,8 +1,8 @@
-import { FormButton, FormContacts, LabelContacts } from "./ContactForm.styled"
 import { useDispatch } from "react-redux";
 import { addContacts} from "redux/contacts/operations";
 import { nanoid } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
+import { FormButtonStyles, FormStyles, LabelStyles } from "components/AllForm.styled";
 
 
 export const ContactForm = () => {
@@ -29,22 +29,22 @@ export const ContactForm = () => {
       }
   
 
-  return  <FormContacts onSubmit={handleNameSet}>
-      <LabelContacts htmlFor={contacts.id}>
+  return  <FormStyles onSubmit={handleNameSet}>
+      <LabelStyles htmlFor={contacts.id}>
           <span>Name</span>
           <input
         id = {nanoid()} 
         type="text"
         name="name"
           />
-        </LabelContacts>
-        <LabelContacts>
+        </LabelStyles>
+        <LabelStyles>
           <span>Number</span>
           <input
         type="tel"
         name="number"
                 />
-        </LabelContacts>
-       <FormButton type="submit">Add contact</FormButton>
-      </FormContacts>
+        </LabelStyles>
+       <FormButtonStyles type="submit">Add contact</FormButtonStyles>
+      </FormStyles>
 }
