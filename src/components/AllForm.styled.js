@@ -13,6 +13,9 @@ display: flex;
 flex-direction: column;
 gap: 5px;
 margin-bottom: 10px;
+font-weight: 500;
+font-size: 14px;
+  line-height: 1.2;
 `;
 
 export const FormButtonStyles = styled.button`
