@@ -15,7 +15,6 @@ export const ContactForm = () => {
       const { name, number} = e.currentTarget.elements;
      const newContact ={ name: name.value, number: number.value, };
      
-   console.log(newContact)
 
   const isExistingContact = contacts.find(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
