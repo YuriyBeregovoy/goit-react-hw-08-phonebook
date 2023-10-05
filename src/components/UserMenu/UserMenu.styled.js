@@ -3,14 +3,13 @@ import styled from "styled-components";
 export const UserMenuStyles = styled.div`
  display: flex;
   align-items: center;
-  gap: 5px;
-  flex-direction: column;
+  gap: 10px;
 `;
 
 export const UserMenuButton = styled.button`
 
     max-width: 169px;
-    padding: 4px 10px;
+    padding: 5px 10px;
     font-family: inherit;
     font-weight: 500;
     font-size: 12px;
