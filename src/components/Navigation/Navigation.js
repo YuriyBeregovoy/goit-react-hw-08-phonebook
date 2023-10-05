@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from 'hooks';
+import { NavStyles } from 'components/UserMenu/UserMenu.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <NavStyles>
       <NavLink  to="/">
         Home
       </NavLink>
@@ -14,6 +15,6 @@ export const Navigation = () => {
           Contacts
         </NavLink>
       )}
-    </nav>
+    </NavStyles>
   );
 };
