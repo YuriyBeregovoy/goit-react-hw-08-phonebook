@@ -1,14 +1,12 @@
+import { Container } from "components/Container.styled";
 
 
 export default function Home() {
   return (
-    <div >
+    <Container >
       <h1 >
-        Phonebook welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
+        Phonebook 
       </h1>
-    </div>
+    </Container>
   );
 }
