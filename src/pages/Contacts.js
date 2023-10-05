@@ -6,6 +6,7 @@ import {  useEffect } from 'react';
 import { fetchContacts } from '../redux/contacts/operations';
 import { getIsLoading, getError } from "../redux/contacts/contactsSlice";
 import { useDispatch } from 'react-redux';
+import { Container } from "components/Container.styled";
 
 export  default function Contacts () {
   const dispatch = useDispatch();
@@ -17,14 +18,14 @@ export  default function Contacts () {
   }, [dispatch]);
 
     return (
-    <>
+    <Container>
       <h1>Phonebook</h1>
         <ContactForm />
         {isLoading && !error ? <b>Request in progress...</b> : null}
       <h2>Contacts</h2>
         <Filter />
         <ContactList/>
-    </>
+    </Container>
     );
 
 
